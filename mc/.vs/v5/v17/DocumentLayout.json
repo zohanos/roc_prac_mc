@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lukya\\OneDrive\\Dokumenty\\v-5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\dokumenty\\v-5\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\dokumenty\\v-5\\in_game_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:in_game_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\dokumenty\\v-5\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Options.cs",
+              "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Dokumenty\\v-5\\Options.cs",
+              "RelativeDocumentMoniker": "Options.cs",
+              "ToolTip": "C:\\Users\\lukya\\OneDrive\\Dokumenty\\v-5\\Options.cs",
+              "RelativeToolTip": "Options.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T21:48:50.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "in_game_menu.cs",
+              "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Dokumenty\\v-5\\in_game_menu.cs",
+              "RelativeDocumentMoniker": "in_game_menu.cs",
+              "ToolTip": "C:\\Users\\lukya\\OneDrive\\Dokumenty\\v-5\\in_game_menu.cs",
+              "RelativeToolTip": "in_game_menu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T19:08:40.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Dokumenty\\v-5\\MainMenu.cs",
+              "RelativeDocumentMoniker": "MainMenu.cs",
+              "ToolTip": "C:\\Users\\lukya\\OneDrive\\Dokumenty\\v-5\\MainMenu.cs",
+              "RelativeToolTip": "MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T15:52:22.351Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
