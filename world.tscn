@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=3 uid="uid://drvauy627c4om"]
+
+[ext_resource type="Script" uid="uid://q3esaqwvds0h" path="res://in_game_menu.cs" id="11_ic0uy"]
+[ext_resource type="FontFile" uid="uid://cdbrjp3krwf4d" path="res://fonts/minecraft-ten-font/MinecraftTen-VGORe.ttf" id="12_hiqwa"]
+[ext_resource type="Texture2D" uid="uid://bmrdf3jxwkg5n" path="res://textures/gui/button.png" id="13_2u3nc"]
+[ext_resource type="Texture2D" uid="uid://ckq7uh7yfsuqu" path="res://textures/gui/button_clicked.png" id="14_udxuc"]
+[ext_resource type="Texture2D" uid="uid://b6n67l475dj7p" path="res://textures/gui/button_hover.png" id="15_ikiii"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ic0uy"]
+bg_color = Color(0, 0, 0, 0.49803922)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cbp6q"]
+content_margin_top = 15.0
+content_margin_bottom = 10.0
+texture = ExtResource("13_2u3nc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_26xuy"]
+texture = ExtResource("14_udxuc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bc84e"]
+texture = ExtResource("15_ikiii")
+
+[node name="World" type="Node3D"]
+
+[node name="in_game_menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_ic0uy")
+
+[node name="Background" type="Panel" parent="in_game_menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ic0uy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="in_game_menu"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -159.0
+offset_top = -95.5
+offset_right = 159.0
+offset_bottom = 95.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back_button" type="Button" parent="in_game_menu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/align_to_largest_stylebox = 1
+theme_override_fonts/font = ExtResource("12_hiqwa")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxTexture_cbp6q")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_26xuy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bc84e")
+text = "Back"
+
+[node name="Options_button" type="Button" parent="in_game_menu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/align_to_largest_stylebox = 1
+theme_override_fonts/font = ExtResource("12_hiqwa")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxTexture_cbp6q")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_26xuy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bc84e")
+text = "Options"
+
+[node name="Exit_to_main_menu_button" type="Button" parent="in_game_menu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/align_to_largest_stylebox = 1
+theme_override_fonts/font = ExtResource("12_hiqwa")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxTexture_cbp6q")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_26xuy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bc84e")
+text = "Exit to main menu"
+
+[connection signal="pressed" from="in_game_menu/VBoxContainer/Back_button" to="in_game_menu" method="on_back_button_pressed"]
+[connection signal="pressed" from="in_game_menu/VBoxContainer/Exit_to_main_menu_button" to="in_game_menu" method="on_exit_to_main_menu_button_pressed"]
