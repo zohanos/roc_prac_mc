@@ -4,7 +4,7 @@ using static Godot.TextServer;
 
 
 public readonly struct BlockDataLib
-{
+ {
 	readonly string[] Names = [
 		"Air",
 		"Stone",

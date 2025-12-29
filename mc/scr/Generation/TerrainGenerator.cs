@@ -9,31 +9,31 @@ public partial class TerrainGenerator : Node
 	public int sealevel = 85;
 	public int snowline = 130;
 	public int maxCaveHeight = 100;
-	private FastNoiseLite _biomeNoise = new FastNoiseLite();
-	private FastNoiseLite _mountainNoise = new FastNoiseLite();
-	private FastNoiseLite _desertNoise = new FastNoiseLite();
-	private FastNoiseLite _cheeseCaveNoise = new FastNoiseLite();
+	private FastNoiseLite baseNoise = new FastNoiseLite();
+	private FastNoiseLite helpNoise = new FastNoiseLite();
+	private FastNoiseLite desertNoise = new FastNoiseLite();
+	private FastNoiseLite cheeseCaveNoise = new FastNoiseLite();
 
 	
 	public void SetupNoise(int seed)
 	{
-		// Biome Selector: Big, sweeping shapes
-		_biomeNoise.Seed = seed;
-		_biomeNoise.Frequency = 0.005f;
-		_biomeNoise.FractalOctaves = 2;
-		_biomeNoise.NoiseType = FastNoiseLite.NoiseTypeEnum.Perlin;
 
-		// Mountains: High detail, sharp
-		_mountainNoise.Seed = seed + 1;
-		_mountainNoise.Frequency = 0.015f;
-		_mountainNoise.FractalOctaves = 4;
+		baseNoise.Seed = seed;
+		baseNoise.Frequency = 0.005f;
+		baseNoise.FractalOctaves = 2;
+		baseNoise.NoiseType = FastNoiseLite.NoiseTypeEnum.Perlin;
 
-		// Plains: Very flat, subtle bumps
-		_desertNoise.Seed = seed + 2;
-		_desertNoise.Frequency = 0.001f;
+		//breaks the terrain, so its not too smooth
+		helpNoise.Seed = seed + 1;
+		helpNoise.Frequency = 0.015f;
+		helpNoise.FractalOctaves = 4;
 
-		_cheeseCaveNoise.Seed = seed + 3;
-		_cheeseCaveNoise.Frequency = 0.005f;
+
+		desertNoise.Seed = seed + 2;
+		desertNoise.Frequency = 0.001f;
+
+		cheeseCaveNoise.Seed = seed + 3;
+		cheeseCaveNoise.Frequency = 0.005f;
 
 
 	}
@@ -103,7 +103,6 @@ public partial class TerrainGenerator : Node
 				}
 			}
 		}
-		GD.Print($"Generated Chunk on {chunkPos.X},{chunkPos.Y}");
 		return chunkData;
 	}
 
@@ -111,7 +110,7 @@ public partial class TerrainGenerator : Node
 	{
 		
 
-		float height = baseHeight + 30 * Mathf.Pow(2, Mathf.Pow(_biomeNoise.GetNoise2D(x, z) + 1, 2)) + 10 * _mountainNoise.GetNoise2D(x, z);
+		float height = baseHeight + 30 * Mathf.Pow(2, Mathf.Pow(baseNoise.GetNoise2D(x, z) + 1, 2)) + 10 * helpNoise.GetNoise2D(x, z);
 
 
 
@@ -120,12 +119,12 @@ public partial class TerrainGenerator : Node
 
 	public bool IsThereDesert(float x, float z)
 	{
-		return _desertNoise.GetNoise2D(x, z) > 0;
+		return desertNoise.GetNoise2D(x, z) > 0;
 	}
 
 	public bool IsThereCave(float x, float y, float z)
 	{
-		return _cheeseCaveNoise.GetNoise3D(x, y, z) > 0.5;
+		return cheeseCaveNoise.GetNoise3D(x, y, z) > 0.5;
 	}
 
 	public bool IsThereWater(float x, float y, float z) { return x > y && x < z; }
