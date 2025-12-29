@@ -50,7 +50,7 @@ public partial class TerrainGenerator : Node
 				float height = GetHeightAt(x + chunkPos.X * 32, y + chunkPos.Y * 32);
 				for (int i = 0; i < 256; i++) 
 				{
-					if (i < maxCaveHeight && IsThereCave(x + chunkPos.X * 32, i, y + chunkPos.Y * 32))
+					if (i < maxCaveHeight && IsThereCave(x + chunkPos.X * 32, i, y + chunkPos.Y * 32) && !IsThereWater(i, height, sealevel))
 					{
 						chunkData[x, i, y] = 0;
 					}
@@ -58,13 +58,27 @@ public partial class TerrainGenerator : Node
 					{
 						if (i < height && height > sealevel && height < snowline)
 						{
-							if (IsThereDesert(x + chunkPos.X * 32, y + chunkPos.Y * 32))
+							if (height - i < 4)
 							{
-								chunkData[x, i, y] = 2;
+								if (IsThereDesert(x + chunkPos.X * 32, y + chunkPos.Y * 32))
+								{
+									chunkData[x, i, y] = 4;
+								}
+								else
+								{
+									if (height - i <= 1)
+									{
+										chunkData[x, i, y] = 2;
+									}
+									else
+									{
+										chunkData[x, i, y] = 3;
+									}
+								}
 							}
 							else
 							{
-								chunkData[x, i, y] = 4;
+								chunkData[x, i, y] = 1;
 							}
 
 						}
@@ -109,8 +123,10 @@ public partial class TerrainGenerator : Node
 		return _desertNoise.GetNoise2D(x, z) > 0;
 	}
 
-	public bool IsThereCave(float x, float y, float z)//vymrdany
+	public bool IsThereCave(float x, float y, float z)
 	{
 		return _cheeseCaveNoise.GetNoise3D(x, y, z) > 0.5;
 	}
+
+	public bool IsThereWater(float x, float y, float z) { return x > y && x < z; }
 }

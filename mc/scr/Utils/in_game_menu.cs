@@ -1,8 +1,10 @@
 using Godot;
+using Godot.NativeInterop;
 using System;
 
 public partial class in_game_menu : Control
 {
+	[Export] Control in_game_options;
 	public bool visible = false;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -41,5 +43,12 @@ public partial class in_game_menu : Control
 	public void on_exit_to_main_menu_button_pressed()
 	{
 		GetTree().ChangeSceneToFile("res://scenes/main_menu.tscn");
+	}
+
+	public void on_options_button_pressed()
+	{
+		visible = false;
+		this.Hide();
+		in_game_options.Show();
 	}
 }

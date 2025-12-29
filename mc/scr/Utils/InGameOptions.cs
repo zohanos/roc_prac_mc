@@ -1,13 +1,14 @@
 using Godot;
 using System;
 
-public partial class OptionsMenu : Control
+public partial class InGameOptions : Control
 {
+	public bool visible = false;
 	[Export] public Button fcButton;
 	[Export] public Button rdButton;
 	[Export] public Button mtButton;
 	[Export] public HSlider rdSlider;
-	
+
 	public Options options = new Options(true, 5, true, false);
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -40,8 +41,18 @@ public partial class OptionsMenu : Control
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		if (Input.IsActionJustPressed("Escape"))
+		{
+			if (visible)
+			{
+				visible = false;
+				this.Hide();
+				Input.MouseMode = Input.MouseModeEnum.Captured;
+			}
+
+		}
 	}
-	
+
 	public void _on_back_button_pressed()
 	{
 		ConfigFile config = new ConfigFile();
@@ -57,7 +68,11 @@ public partial class OptionsMenu : Control
 		{
 			GD.PrintErr("Nepodařilo se uložit nastavení: " + err);
 		}
-		GetTree().ChangeSceneToFile("res://scenes/main_menu.tscn");
+		visible = false;
+		this.Hide();
+		Input.MouseMode = Input.MouseModeEnum.Captured;
+
+		World.OptionsChanged();
 	}
 
 	public void _on_FaceCullingButton_pressed()
@@ -72,7 +87,6 @@ public partial class OptionsMenu : Control
 			fcButton.Text = "FaceCulling - true";
 			options.SetFaceCulling(true);
 		}
-
 	}
 
 	public void _on_RenderDistanceSlider_changed(bool value_changed)

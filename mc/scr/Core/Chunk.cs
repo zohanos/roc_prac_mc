@@ -32,13 +32,19 @@ public partial class Chunk : StaticBody3D
 			var tg = new TerrainGenerator();
 			return tg.GenerateTerrainShape(chunkPosition);
 		});
-		RenderChunk();
+		RenderChunkMT();
 	}
 
 	public void RenderChunk()
 	{
 		Renderer r = new Renderer();
 		r.UpdateMesh(this);
+	}
+
+	public void RenderChunkMT()
+	{
+		Renderer r = new Renderer();
+		r.UpdateMeshMT(this);
 	}
 
 }

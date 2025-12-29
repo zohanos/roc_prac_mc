@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bqhldjgwpvard"]
+[gd_scene load_steps=12 format=3 uid="uid://bqhldjgwpvard"]
 
 [ext_resource type="Script" uid="uid://q6e2asvunqnq" path="res://scr/Utils/OptionsMenu.cs" id="1_dhn0l"]
 [ext_resource type="Texture2D" uid="uid://cbnebkj5s64q3" path="res://assets/textures/gui/options_background.png" id="2_k61yy"]
@@ -23,7 +23,10 @@ texture = ExtResource("5_2f1bn")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cust3"]
 texture = ExtResource("6_i80p0")
 
-[node name="options_menu" type="Control"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dhn0l"]
+texture = ExtResource("4_binsn")
+
+[node name="options_menu" type="Control" node_paths=PackedStringArray("fcButton", "rdButton", "mtButton", "rdSlider")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,6 +34,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dhn0l")
+fcButton = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/FaceCullingButton")
+rdButton = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/RenderDistanceButton")
+mtButton = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/MultithreadingButton")
+rdSlider = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/RenderDistanceSlider")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -82,7 +89,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 6
 theme_override_constants/separation = 10
 
-[node name="Start_button" type="Button" parent="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+[node name="FaceCullingButton" type="Button" parent="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/align_to_largest_stylebox = 1
@@ -91,10 +98,9 @@ theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxTexture_0g30k")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_sa5ru")
 theme_override_styles/hover = SubResource("StyleBoxTexture_cust3")
-text = "Start Game
-"
+text = "FaceCulling"
 
-[node name="Start_button2" type="Button" parent="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+[node name="RenderDistanceButton" type="Button" parent="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/align_to_largest_stylebox = 1
@@ -103,10 +109,17 @@ theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxTexture_0g30k")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_sa5ru")
 theme_override_styles/hover = SubResource("StyleBoxTexture_cust3")
-text = "Start Game
-"
+theme_override_styles/disabled = SubResource("StyleBoxTexture_dhn0l")
+text = "RenderDistance"
 
-[node name="Start_button3" type="Button" parent="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+[node name="RenderDistanceSlider" type="HSlider" parent="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+min_value = 1.0
+max_value = 50.0
+value = 1.0
+rounded = true
+
+[node name="MultithreadingButton" type="Button" parent="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/align_to_largest_stylebox = 1
@@ -142,66 +155,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_cust3")
 text = "Start Game
 "
 
-[node name="Start_button6" type="Button" parent="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/align_to_largest_stylebox = 1
-theme_override_fonts/font = ExtResource("3_7txom")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxTexture_0g30k")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_sa5ru")
-theme_override_styles/hover = SubResource("StyleBoxTexture_cust3")
-text = "Start Game
-"
-
-[node name="Start_button7" type="Button" parent="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/align_to_largest_stylebox = 1
-theme_override_fonts/font = ExtResource("3_7txom")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxTexture_0g30k")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_sa5ru")
-theme_override_styles/hover = SubResource("StyleBoxTexture_cust3")
-text = "Start Game
-"
-
-[node name="Start_button8" type="Button" parent="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/align_to_largest_stylebox = 1
-theme_override_fonts/font = ExtResource("3_7txom")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxTexture_0g30k")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_sa5ru")
-theme_override_styles/hover = SubResource("StyleBoxTexture_cust3")
-text = "Start Game
-"
-
-[node name="Start_button9" type="Button" parent="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/align_to_largest_stylebox = 1
-theme_override_fonts/font = ExtResource("3_7txom")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxTexture_0g30k")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_sa5ru")
-theme_override_styles/hover = SubResource("StyleBoxTexture_cust3")
-text = "Start Game
-"
-
-[node name="Start_button10" type="Button" parent="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/align_to_largest_stylebox = 1
-theme_override_fonts/font = ExtResource("3_7txom")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxTexture_0g30k")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_sa5ru")
-theme_override_styles/hover = SubResource("StyleBoxTexture_cust3")
-text = "Start Game
-"
-
 [node name="back_options_button" type="Button" parent="GridContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
@@ -213,4 +166,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_sa5ru")
 theme_override_styles/hover = SubResource("StyleBoxTexture_cust3")
 text = "Back"
 
+[connection signal="pressed" from="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/FaceCullingButton" to="." method="_on_FaceCullingButton_pressed"]
+[connection signal="drag_ended" from="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/RenderDistanceSlider" to="." method="_on_RenderDistanceSlider_changed"]
+[connection signal="pressed" from="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/MultithreadingButton" to="." method="_on_MultiThreadingButton_pressed"]
 [connection signal="pressed" from="GridContainer/VBoxContainer/back_options_button" to="." method="_on_back_button_pressed"]

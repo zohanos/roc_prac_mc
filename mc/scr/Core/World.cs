@@ -4,16 +4,34 @@ using System.Collections.Generic;
 
 public partial class World : Node3D
 {
-	private static Options options = new Options(true, 5, true);
+	private static Options options = new Options(true, 5, true, false);
 	[Export] public Node3D player; 
-	private Vector2I _lastPlayerChunkPos;
+	private static Vector2I _lastPlayerChunkPos;
 	private const int ChunkSize = 32; 
 	PackedScene chunkScene = GD.Load<PackedScene>("res://scenes/chunk.tscn");
 	private Dictionary<Vector2I, Chunk> world = new Dictionary<Vector2I, Chunk>();
 
 	public override void _Ready()
 	{
-		
+		ConfigFile config = new ConfigFile();
+		Error err = config.Load("res://assets/options.cfg");
+
+
+		if (err != Error.Ok)
+		{
+			GD.Print("Nastavení nenalezeno, vracím výchozí.");
+			options = new Options(true, 4, true, false);
+		}
+		else
+		{
+			bool fc = (bool)config.GetValue("Graphics", "FaceCulling", true);
+			int rd = (int)config.GetValue("Graphics", "RenderDistance", 4);
+			bool mt = (bool)config.GetValue("System", "Multithreading", true);
+			bool gm = (bool)config.GetValue("Graphics", "GreedyMeshing", false);
+
+			options = new Options(fc, rd, mt, gm);
+		}
+
 		SetTextureArray();
 		_lastPlayerChunkPos = GetChunkPos(player.GlobalPosition);
 		UpdateChunks();
@@ -73,6 +91,7 @@ public partial class World : Node3D
 				{
 					CreateChunk(worldPos);
 				}
+
 			}
 		}
 	}
@@ -81,11 +100,12 @@ public partial class World : Node3D
 	{
 		Chunk chunk = (Chunk)chunkScene.Instantiate();
 		AddChild(chunk);
+
 		chunk.Position = new Vector3(pos.X * ChunkSize, 0, pos.Y * ChunkSize);
 		world[pos] = chunk;
 
 		chunk.SetChunkPosition(pos);
-		switch (true)
+		switch (options.GetMultithreading())
 		{
 			case true:
 				chunk.GenerateChunkMT();
@@ -95,7 +115,6 @@ public partial class World : Node3D
 				break;
 		}
 
-		//chunk.GenerateChunk();
 	}
 
 	public void SetTextureArray()
@@ -125,4 +144,29 @@ public partial class World : Node3D
 	}
 
 	public static Options GetOptions() {  return options; }
+
+	public static Vector2I GetPlayerChunkPos() { return _lastPlayerChunkPos; }
+
+	public static void OptionsChanged()
+	{
+
+		ConfigFile config = new ConfigFile();
+		Error err = config.Load("res://assets/options.cfg");
+
+
+		if (err != Error.Ok)
+		{
+			GD.Print("Nastavení nenalezeno, vracím výchozí.");
+			options = new Options(true, 4, true, false);
+		}
+		else
+		{
+			bool fc = (bool)config.GetValue("Graphics", "FaceCulling", true);
+			int rd = (int)config.GetValue("Graphics", "RenderDistance", 4);
+			bool mt = (bool)config.GetValue("System", "Multithreading", true);
+			bool gm = (bool)config.GetValue("Graphics", "GreedyMeshing", false);
+
+			options = new Options(fc, rd, mt, gm);
+		}
+	}
 }

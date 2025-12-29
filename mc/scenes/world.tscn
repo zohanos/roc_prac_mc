@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://drvauy627c4om"]
+[gd_scene load_steps=23 format=3 uid="uid://drvauy627c4om"]
 
 [ext_resource type="Script" uid="uid://ceruppbtewr8" path="res://scr/Core/World.cs" id="1_4mrxx"]
 [ext_resource type="Script" uid="uid://q3esaqwvds0h" path="res://scr/Utils/in_game_menu.cs" id="1_71j4m"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bmrdf3jxwkg5n" path="res://assets/textures/gui/button.png" id="3_i7141"]
 [ext_resource type="Texture2D" uid="uid://ckq7uh7yfsuqu" path="res://assets/textures/gui/button_clicked.png" id="4_4mrxx"]
 [ext_resource type="Texture2D" uid="uid://b6n67l475dj7p" path="res://assets/textures/gui/button_hover.png" id="5_7r4gi"]
+[ext_resource type="Texture2D" uid="uid://cbnebkj5s64q3" path="res://assets/textures/gui/options_background.png" id="9_7r4gi"]
+[ext_resource type="Script" uid="uid://dc1kqcasjxclu" path="res://scr/Utils/InGameOptions.cs" id="9_w7kh3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_i7141"]
 
@@ -32,6 +34,25 @@ texture = ExtResource("4_4mrxx")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bc84e"]
 texture = ExtResource("5_7r4gi")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w7kh3"]
+texture = ExtResource("9_7r4gi")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e3hyu"]
+content_margin_top = 15.0
+content_margin_bottom = 10.0
+texture = ExtResource("3_i7141")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q5onr"]
+texture = ExtResource("4_4mrxx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jhx03"]
+texture = ExtResource("5_7r4gi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o8fc1"]
+texture = ExtResource("3_i7141")
+
 [node name="World" type="Node3D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_4mrxx")
 player = NodePath("Player")
@@ -51,7 +72,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 300, 0)
 
 [node name="Chunks" type="Node3D" parent="."]
 
-[node name="in_game_menu" type="Control" parent="."]
+[node name="in_game_menu" type="Control" parent="." node_paths=PackedStringArray("in_game_options")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -59,6 +80,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_71j4m")
+in_game_options = NodePath("../in_game_options")
 
 [node name="Background" type="Panel" parent="in_game_menu"]
 layout_mode = 1
@@ -117,5 +139,153 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_26xuy")
 theme_override_styles/hover = SubResource("StyleBoxTexture_bc84e")
 text = "Exit to main menu"
 
+[node name="in_game_options" type="Control" parent="." node_paths=PackedStringArray("fcButton", "rdButton", "mtButton", "rdSlider")]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("9_w7kh3")
+fcButton = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/FaceCullingButton")
+rdButton = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/RenderDistanceButton")
+mtButton = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/MultithreadingButton")
+rdSlider = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/RenderDistanceSlider")
+
+[node name="Panel" type="Panel" parent="in_game_options"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_w7kh3")
+
+[node name="GridContainer" type="GridContainer" parent="in_game_options"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Control" type="Control" parent="in_game_options/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="in_game_options/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="in_game_options/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_qfnet")
+theme_override_font_sizes/font_size = 70
+text = "OPTIONS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="in_game_options/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="in_game_options/GridContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_constants/separation = 10
+
+[node name="FaceCullingButton" type="Button" parent="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/align_to_largest_stylebox = 1
+theme_override_fonts/font = ExtResource("2_qfnet")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxTexture_e3hyu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q5onr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jhx03")
+text = "FaceCulling"
+
+[node name="RenderDistanceButton" type="Button" parent="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/align_to_largest_stylebox = 1
+theme_override_fonts/font = ExtResource("2_qfnet")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxTexture_e3hyu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q5onr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jhx03")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_o8fc1")
+text = "RenderDistance"
+
+[node name="RenderDistanceSlider" type="HSlider" parent="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+min_value = 1.0
+max_value = 50.0
+value = 1.0
+rounded = true
+
+[node name="MultithreadingButton" type="Button" parent="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/align_to_largest_stylebox = 1
+theme_override_fonts/font = ExtResource("2_qfnet")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxTexture_e3hyu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q5onr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jhx03")
+text = "Start Game
+"
+
+[node name="Start_button4" type="Button" parent="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/align_to_largest_stylebox = 1
+theme_override_fonts/font = ExtResource("2_qfnet")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxTexture_e3hyu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q5onr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jhx03")
+text = "Start Game
+"
+
+[node name="Start_button5" type="Button" parent="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/align_to_largest_stylebox = 1
+theme_override_fonts/font = ExtResource("2_qfnet")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxTexture_e3hyu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q5onr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jhx03")
+text = "Start Game
+"
+
+[node name="back_options_button" type="Button" parent="in_game_options/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/align_to_largest_stylebox = 1
+theme_override_fonts/font = ExtResource("2_qfnet")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxTexture_e3hyu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q5onr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jhx03")
+text = "Back"
+
 [connection signal="pressed" from="in_game_menu/VBoxContainer/Back_button" to="in_game_menu" method="on_back_button_pressed"]
+[connection signal="pressed" from="in_game_menu/VBoxContainer/Options_button" to="in_game_menu" method="on_options_button_pressed"]
 [connection signal="pressed" from="in_game_menu/VBoxContainer/Exit_to_main_menu_button" to="in_game_menu" method="on_exit_to_main_menu_button_pressed"]
+[connection signal="pressed" from="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/FaceCullingButton" to="in_game_options" method="_on_FaceCullingButton_pressed"]
+[connection signal="drag_ended" from="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/RenderDistanceSlider" to="in_game_options" method="_on_RenderDistanceSlider_changed"]
+[connection signal="pressed" from="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/MultithreadingButton" to="in_game_options" method="_on_MultiThreadingButton_pressed"]
+[connection signal="pressed" from="in_game_options/GridContainer/VBoxContainer/back_options_button" to="in_game_options" method="_on_back_button_pressed"]
