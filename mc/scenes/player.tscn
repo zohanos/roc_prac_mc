@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b8xaha2lnruyi"]
 
-[ext_resource type="Script" uid="uid://bvvp3d65ar15f" path="res://scr/Core/Player.cs" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://bvvp3d65ar15f" path="res://src/Core/Player.cs" id="1_3vyb7"]
 [ext_resource type="Shader" uid="uid://be6x2l2w4h1rq" path="res://assets/shaders/highlight.gdshader" id="2_g2els"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_u8vuu"]

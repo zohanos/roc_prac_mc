@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\generation\\terraingenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:scr\\generation\\terraingenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\core\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:scr\\core\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\core\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:scr\\core\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\generation\\terraingenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:scr\\generation\\terraingenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\rendering\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -64,11 +64,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "World.cs",
               "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Core\\World.cs",
               "RelativeDocumentMoniker": "scr\\Core\\World.cs",
@@ -77,8 +77,7 @@
               "ViewState": "AgIAALgAAAAAAAAAAAAAANYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-28T15:02:40.061Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -142,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Core\\Player.cs",
               "RelativeDocumentMoniker": "scr\\Core\\Player.cs",
@@ -150,8 +149,7 @@
               "RelativeToolTip": "scr\\Core\\Player.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAQwEEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T18:36:27.043Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T18:36:27.043Z"
             },
             {
               "$type": "Document",
@@ -167,26 +165,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "TerrainGenerator.cs",
               "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Generation\\TerrainGenerator.cs",
               "RelativeDocumentMoniker": "scr\\Generation\\TerrainGenerator.cs",
               "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Generation\\TerrainGenerator.cs",
               "RelativeToolTip": "scr\\Generation\\TerrainGenerator.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowFsAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAwwJUAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-28T16:20:49.115Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Chunk.cs",
               "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Core\\Chunk.cs",
               "RelativeDocumentMoniker": "scr\\Core\\Chunk.cs",
               "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Core\\Chunk.cs",
               "RelativeToolTip": "scr\\Core\\Chunk.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA1wDcAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-28T15:02:42.001Z",
               "EditorCaption": ""

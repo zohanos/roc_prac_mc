@@ -3,54 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\generation\\terraingenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:scr\\generation\\terraingenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\core\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:scr\\core\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\core\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:scr\\core\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\core\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:scr\\core\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\rendering\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:scr\\rendering\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\data\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:scr\\data\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\utils\\in_game_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:scr\\utils\\in_game_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\utils\\ingameoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:scr\\utils\\ingameoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\utils\\optionsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:scr\\utils\\optionsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\core\\texturemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:scr\\core\\texturemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\utils\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:scr\\utils\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\data\\voxeldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:scr\\data\\voxeldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\lukya\\OneDrive\\Dokumenty\\v-5\\in_game_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -64,158 +16,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "World.cs",
-              "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Core\\World.cs",
-              "RelativeDocumentMoniker": "scr\\Core\\World.cs",
-              "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Core\\World.cs",
-              "RelativeToolTip": "scr\\Core\\World.cs",
-              "ViewState": "AgIAALgAAAAAAAAAAAAAANYAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T15:02:40.061Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Options.cs",
-              "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Utils\\Options.cs",
-              "RelativeDocumentMoniker": "scr\\Utils\\Options.cs",
-              "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Utils\\Options.cs",
-              "RelativeToolTip": "scr\\Utils\\Options.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-29T00:53:19.639Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Block.cs",
-              "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Data\\Block.cs",
-              "RelativeDocumentMoniker": "scr\\Data\\Block.cs",
-              "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Data\\Block.cs",
-              "RelativeToolTip": "scr\\Data\\Block.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T02:13:09.852Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "OptionsMenu.cs",
-              "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Utils\\OptionsMenu.cs",
-              "RelativeDocumentMoniker": "scr\\Utils\\OptionsMenu.cs",
-              "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Utils\\OptionsMenu.cs",
-              "RelativeToolTip": "scr\\Utils\\OptionsMenu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-29T02:13:54.331Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "in_game_menu.cs",
-              "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Utils\\in_game_menu.cs",
-              "RelativeDocumentMoniker": "scr\\Utils\\in_game_menu.cs",
-              "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Utils\\in_game_menu.cs",
-              "RelativeToolTip": "scr\\Utils\\in_game_menu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-29T02:51:59.931Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "InGameOptions.cs",
-              "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Utils\\InGameOptions.cs",
-              "RelativeDocumentMoniker": "scr\\Utils\\InGameOptions.cs",
-              "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Utils\\InGameOptions.cs",
-              "RelativeToolTip": "scr\\Utils\\InGameOptions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-29T02:57:54.491Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Core\\Player.cs",
-              "RelativeDocumentMoniker": "scr\\Core\\Player.cs",
-              "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Core\\Player.cs",
-              "RelativeToolTip": "scr\\Core\\Player.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAQwEEAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T18:36:27.043Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Renderer.cs",
-              "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Rendering\\Renderer.cs",
-              "RelativeDocumentMoniker": "scr\\Rendering\\Renderer.cs",
-              "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Rendering\\Renderer.cs",
-              "RelativeToolTip": "scr\\Rendering\\Renderer.cs",
-              "ViewState": "AgIAAOoAAAAAAAAAAAAAAAMBAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T16:52:47.626Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TerrainGenerator.cs",
-              "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Generation\\TerrainGenerator.cs",
-              "RelativeDocumentMoniker": "scr\\Generation\\TerrainGenerator.cs",
-              "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Generation\\TerrainGenerator.cs",
-              "RelativeToolTip": "scr\\Generation\\TerrainGenerator.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAwwJUAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T16:20:49.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Chunk.cs",
-              "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Core\\Chunk.cs",
-              "RelativeDocumentMoniker": "scr\\Core\\Chunk.cs",
-              "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Core\\Chunk.cs",
-              "RelativeToolTip": "scr\\Core\\Chunk.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T15:02:42.001Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TextureManager.cs",
-              "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Core\\TextureManager.cs",
-              "RelativeDocumentMoniker": "scr\\Core\\TextureManager.cs",
-              "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Core\\TextureManager.cs",
-              "RelativeToolTip": "scr\\Core\\TextureManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T14:57:48.36Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "VoxelData.cs",
-              "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Data\\VoxelData.cs",
-              "RelativeDocumentMoniker": "scr\\Data\\VoxelData.cs",
-              "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\scr\\Data\\VoxelData.cs",
-              "RelativeToolTip": "scr\\Data\\VoxelData.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAAAG0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T02:31:09.215Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "in_game_menu.cs",
               "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Dokumenty\\v-5\\in_game_menu.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Dokumenty\\v-5\\in_game_menu.cs",
@@ -223,11 +28,12 @@
               "RelativeToolTip": "..\\..\\..\\..\\Dokumenty\\v-5\\in_game_menu.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T19:08:40.695Z"
+              "WhenOpened": "2025-12-02T19:08:40.695Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 1,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Dokumenty\\v-5\\MainMenu.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Dokumenty\\v-5\\MainMenu.cs",

@@ -1,15 +1,15 @@
 [gd_scene load_steps=25 format=3 uid="uid://drvauy627c4om"]
 
-[ext_resource type="Script" uid="uid://ceruppbtewr8" path="res://scr/Core/World.cs" id="1_4mrxx"]
-[ext_resource type="Script" uid="uid://q3esaqwvds0h" path="res://scr/Utils/in_game_menu.cs" id="1_71j4m"]
+[ext_resource type="Script" uid="uid://ceruppbtewr8" path="res://src/Core/World.cs" id="1_4mrxx"]
+[ext_resource type="Script" uid="uid://q3esaqwvds0h" path="res://src/Utils/in_game_menu.cs" id="1_71j4m"]
 [ext_resource type="PackedScene" uid="uid://b8xaha2lnruyi" path="res://scenes/player.tscn" id="1_qfnet"]
-[ext_resource type="Script" uid="uid://bpqdi1rx6x4ph" path="res://scr/Core/TextureManager.cs" id="2_7r4gi"]
+[ext_resource type="Script" uid="uid://bpqdi1rx6x4ph" path="res://src/Core/TextureManager.cs" id="2_7r4gi"]
 [ext_resource type="FontFile" uid="uid://cdbrjp3krwf4d" path="res://assets/fonts/minecraft-ten-font/MinecraftTen-VGORe.ttf" id="2_qfnet"]
 [ext_resource type="Texture2D" uid="uid://bmrdf3jxwkg5n" path="res://assets/textures/gui/button.png" id="3_i7141"]
 [ext_resource type="Texture2D" uid="uid://ckq7uh7yfsuqu" path="res://assets/textures/gui/button_clicked.png" id="4_4mrxx"]
 [ext_resource type="Texture2D" uid="uid://b6n67l475dj7p" path="res://assets/textures/gui/button_hover.png" id="5_7r4gi"]
 [ext_resource type="Texture2D" uid="uid://cbnebkj5s64q3" path="res://assets/textures/gui/options_background.png" id="9_7r4gi"]
-[ext_resource type="Script" uid="uid://dc1kqcasjxclu" path="res://scr/Utils/InGameOptions.cs" id="9_w7kh3"]
+[ext_resource type="Script" uid="uid://dc1kqcasjxclu" path="res://src/Utils/InGameOptions.cs" id="9_w7kh3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_i7141"]
 

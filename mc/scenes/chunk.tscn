@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://btckvtmoq03ph"]
 
-[ext_resource type="Script" uid="uid://bpti3yp0fyy0" path="res://scr/Core/Chunk.cs" id="1_jas4a"]
+[ext_resource type="Script" uid="uid://bpti3yp0fyy0" path="res://src/Core/Chunk.cs" id="1_jas4a"]
 [ext_resource type="Shader" uid="uid://dxy5dmjsrvpxv" path="res://assets/shaders/shader.gdshader" id="2_jtw3q"]
-[ext_resource type="Texture2DArray" path="res://assets/resources/block_textures.res" id="3_c3gog"]
+[ext_resource type="Texture2DArray" uid="uid://bbmm14sm7ru7s" path="res://assets/resources/block_textures.res" id="3_c3gog"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c3gog"]
 render_priority = 0

@@ -31,7 +31,7 @@ public partial class TerrainGenerator : Node
 
 
 		desertNoise.Seed = seed + 2;
-		desertNoise.Frequency = 0.001f; //0.001
+		desertNoise.Frequency = 0.001f; 
 
 
         cheeseCaveNoise.Seed = seed + 3;
