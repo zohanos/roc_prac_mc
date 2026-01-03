@@ -13,6 +13,7 @@ public readonly struct BlockDataLib
 		"Sand",
 		"Snow",
 		"Water",
+		"Cactus",
 		];
 
 	readonly CubeTexture[] Textures = {
@@ -23,6 +24,7 @@ public readonly struct BlockDataLib
 		new CubeTexture(new QuadTexture(3)),
 		new CubeTexture(new QuadTexture(4)),
 		new CubeTexture(new QuadTexture(5)),
+		new CubeTexture(new QuadTexture(6)),
 	};
 
 	readonly int[] IDs = [
@@ -33,10 +35,12 @@ public readonly struct BlockDataLib
 		4, 
 		5,
 		6,
+		7,
 		];
 
 	readonly bool[] Transparent = { 
 		true, 
+		false,
 		false,
 		false,
 		false,

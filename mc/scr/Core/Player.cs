@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using static Godot.Image;
 
 public partial class Player : CharacterBody3D
 {
@@ -11,7 +12,7 @@ public partial class Player : CharacterBody3D
 	[Export] private float _mouseSensitivity = 0.1f;
 	[Export] private float _movementSpeed = 4f;
 	[Export] private float _jumpVelocity = 9f;
-	private bool flight = false;
+	private bool flight = true;
 
 	private float _cameraXRotation;
 
@@ -25,7 +26,7 @@ public partial class Player : CharacterBody3D
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 	}
 
-	public override void _Input(InputEvent @event)
+	public override void _UnhandledInput(InputEvent @event)
 	{
 		if (@event is InputEventMouseMotion)
 		{
@@ -33,23 +34,52 @@ public partial class Player : CharacterBody3D
 			var deltaX = mouseMotion.Relative.Y * _mouseSensitivity;
 			var deltaY = mouseMotion.Relative.X * _mouseSensitivity;
 
-			Head.RotateY(Mathf.DegToRad(-deltaY));
+
+            Head.RotateY(Mathf.DegToRad(-deltaY));
 			if (_cameraXRotation + deltaX > -90 && _cameraXRotation + deltaX < 90)
 			{
 				Camera.RotateX(Mathf.DegToRad(-deltaX));
-				_cameraXRotation += deltaX;
+                RayCast.RotateX(Mathf.DegToRad(-deltaX));
+                _cameraXRotation += deltaX;
 			}
 		}
 	}
 
 	public override void _Process(double delta)
 	{
+		
+		if (RayCast.IsColliding())
+		{ 
+			Vector3 normal = RayCast.GetCollisionNormal();
+            Vector3 collisionPoint = RayCast.GetCollisionPoint() - (normal * 0.01f);
+            Vector3I collidingBlock = new Vector3I(
+                (int)MathF.Round(collisionPoint.X),
+                (int)MathF.Round(collisionPoint.Y),
+                (int)MathF.Round(collisionPoint.Z)
+                );
 
 
+            BlockHighlight.GlobalPosition = collidingBlock;
+			BlockHighlight.Visible = true;
+            if (Input.IsActionJustPressed("Break"))
+            {
+				World.SetblockInChunk(collidingBlock, 0);
+            }
+        }
+		else
+		{
+            BlockHighlight.Visible = false;
+        }
 	}
 
 	public override void _PhysicsProcess(double delta)
 	{
+
+
+
+
+
+
 		var velocity = Velocity;
 
 		if (Input.IsActionJustPressed("EnableFlight"))
@@ -88,7 +118,6 @@ public partial class Player : CharacterBody3D
 		{
 			velocity.Y = 0;
 		}
-
 		var inputDirection = Input.GetVector("Left", "Right", "Back", "Forward");
 
 		var direction = Vector3.Zero;
@@ -103,4 +132,9 @@ public partial class Player : CharacterBody3D
 		Velocity = velocity;
 		MoveAndSlide();
 	}
+
+	public Vector3 GetDir(Vector3 vector)
+	{
+		return new Vector3(MathF.Sign(vector.X), MathF.Sign(vector.Y), MathF.Sign(vector.Z));
+    }
 }

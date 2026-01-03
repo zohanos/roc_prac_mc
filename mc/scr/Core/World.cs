@@ -4,12 +4,19 @@ using System.Collections.Generic;
 
 public partial class World : Node3D
 {
+	public bool firstgen = true;
+	[Export] public Control LoadingScreen;
+	[Export] public ProgressBar ProgressBar;
 	private static Options options = new Options(true, 5, true, false);
 	[Export] public Node3D player; 
 	private static Vector2I _lastPlayerChunkPos;
 	private const int ChunkSize = 32; 
 	PackedScene chunkScene = GD.Load<PackedScene>("res://scenes/chunk.tscn");
-	private Dictionary<Vector2I, Chunk> world = new Dictionary<Vector2I, Chunk>();
+	public static Dictionary<Vector2I, Chunk> world = new Dictionary<Vector2I, Chunk>();
+	public static Dictionary<Vector2I, bool> notRenderedChunks = new Dictionary<Vector2I, bool>();
+	public static int pb;
+	public static bool loadingScreenVisibility = false;
+
 
 	public override void _Ready()
 	{
@@ -31,6 +38,9 @@ public partial class World : Node3D
 
 			options = new Options(fc, rd, mt, gm);
 		}
+		
+		
+		
 
 		SetTextureArray();
 		_lastPlayerChunkPos = GetChunkPos(player.GlobalPosition);
@@ -39,6 +49,15 @@ public partial class World : Node3D
 	}
 	public override void _Process(double delta)
 	{
+		if (LoadingScreen.Visible != loadingScreenVisibility)
+		{
+			LoadingScreen.Hide();
+			firstgen = false;
+		}
+		if (ProgressBar.Value != pb)
+		{
+			ProgressBar.Value = pb;
+		}
 		Vector2I currentChunkPos = GetChunkPos(player.GlobalPosition);
 
 		if (currentChunkPos != _lastPlayerChunkPos)
@@ -79,6 +98,7 @@ public partial class World : Node3D
 			chunk.QueueFree(); // Removes from scene and memory
 		}
 
+		
 		// 2. Identify and load new chunks
 		for (int x = -renderDistance; x <= renderDistance; x++)
 		{
@@ -89,10 +109,21 @@ public partial class World : Node3D
 
 				if (!world.ContainsKey(worldPos))
 				{
+					if (firstgen) { notRenderedChunks[worldPos] = false; }
 					CreateChunk(worldPos);
 				}
 
 			}
+		}
+
+		if(notRenderedChunks.Count > renderDistance * 2 * 2 & firstgen)
+		{
+			LoadingScreen.Show();
+			loadingScreenVisibility = true;
+			pb = 0;
+			ProgressBar.MaxValue = notRenderedChunks.Count;
+			ProgressBar.Step = 1;
+			ProgressBar.Value = 0;
 		}
 	}
 
@@ -168,5 +199,27 @@ public partial class World : Node3D
 
 			options = new Options(fc, rd, mt, gm);
 		}
+	}
+
+	public static void RemoveFromNotRendered(Vector2I pos)
+	{
+		pb = pb + 1;
+		notRenderedChunks.Remove(pos);
+		if (notRenderedChunks.Count == 0)
+		{
+			loadingScreenVisibility = false;
+		}
+	}
+
+	public static void SetblockInChunk(Vector3I pos, int blockID)
+	{
+		int localX = pos.X & 31;
+		int localY = pos.Y;
+		int localZ = pos.Z & 31;
+
+		int chunkX = pos.X >> 5;
+		int chunkY = pos.Z >> 5;
+
+		world[new Vector2I(chunkX, chunkY)].SetBlock(localX, localY, localZ, blockID);
 	}
 }

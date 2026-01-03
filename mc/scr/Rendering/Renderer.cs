@@ -153,42 +153,6 @@ public partial class Renderer : Node
 
 	public async void UpdateMeshMT(Chunk chunk)
 	{
-		/*var meshData = await Task.Run(() =>
-		{
-			var vertices = new List<Vector3>();
-			var normals = new List<Vector3>();
-			var uvs = new List<Vector3>();
-			var indices = new List<int>();
-			var uv2s = new List<Vector2>();
-
-			for (int x = 0; x < chunk.chunkDimms.X; x++)
-			{
-				for (int y = 0; y < chunk.chunkDimms.Y; y++)
-				{
-					for (int z = 0; z < chunk.chunkDimms.Z; z++)
-					{
-						int blockId = chunk.chunkData[x + 1, y, z + 1];
-						if (blockId == 0) continue;
-
-						AddBlock(x, y, z, blockId, vertices, normals, uvs, indices, chunk, uv2s);
-					}
-				}
-			}
-
-			if (vertices.Count == 0) return null;
-
-			//Prepare the data array
-			var arrays = new Godot.Collections.Array();
-			arrays.Resize((int)Mesh.ArrayType.Max);
-			arrays[(int)Mesh.ArrayType.Vertex] = vertices.ToArray();
-			arrays[(int)Mesh.ArrayType.Normal] = normals.ToArray();
-			arrays[(int)Mesh.ArrayType.TexUV] = uvs.ToArray();
-			arrays[(int)Mesh.ArrayType.Index] = indices.ToArray();
-			arrays[(int)Mesh.ArrayType.TexUV2] = uv2s.ToArray();
-
-			return arrays;
-		});*/
-
 
 		MeshData? result = await Task.Run<MeshData?>(() =>
 		{

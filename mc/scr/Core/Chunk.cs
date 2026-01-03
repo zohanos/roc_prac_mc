@@ -9,6 +9,7 @@ public partial class Chunk : StaticBody3D
 	public Vector2I chunkPosition;
 	public Vector3I chunkDimms = new Vector3I(32, 256, 32);
 	public int[,,] chunkData;
+	public bool rendered = false;
 
 	public Chunk()
 	{
@@ -39,12 +40,22 @@ public partial class Chunk : StaticBody3D
 	{
 		Renderer r = new Renderer();
 		r.UpdateMesh(this);
+		World.RemoveFromNotRendered(chunkPosition);
 	}
 
 	public void RenderChunkMT()
 	{
 		Renderer r = new Renderer();
 		r.UpdateMeshMT(this);
+		World.RemoveFromNotRendered(chunkPosition);
+	}
+
+
+	public void SetBlock(int x, int y, int z, int blockid)
+	{
+		//at borders neighbour chunk dosnt render needed side
+		chunkData[x+1, y, z+1] = blockid;
+		RenderChunkMT();
 	}
 
 }
