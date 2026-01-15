@@ -39,23 +39,43 @@ public partial class Chunk : StaticBody3D
 	public void RenderChunk()
 	{
 		Renderer r = new Renderer();
-		r.UpdateMesh(this);
+		if (World.GetOptions().GetGreedyMeshing())
+		{
+			r.GreedyMesh(this);
+		}
+		else 
+		{ 
+			r.UpdateMesh(this); 
+		}
 		World.RemoveFromNotRendered(chunkPosition);
 	}
 
 	public void RenderChunkMT()
 	{
 		Renderer r = new Renderer();
-		r.UpdateMeshMT(this);
+		if (World.GetOptions().GetGreedyMeshing())
+		{
+			r.GreedyMeshMT(this);
+		}
+		else
+		{
+			r.UpdateMeshMT(this);
+		}
 		World.RemoveFromNotRendered(chunkPosition);
 	}
 
-
+	
 	public void SetBlock(int x, int y, int z, int blockid)
 	{
-		//at borders neighbour chunk dosnt render needed side
 		chunkData[x+1, y, z+1] = blockid;
 		RenderChunkMT();
+	}
+
+	public int GetBlockID(int x, int y, int z)
+	{
+		if (y < 0  || y >= chunkDimms.Y )
+			return 0;
+		return chunkData[x + 1, y, z + 1];
 	}
 
 }

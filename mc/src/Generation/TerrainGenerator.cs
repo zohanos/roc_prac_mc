@@ -73,7 +73,7 @@ public partial class TerrainGenerator : Node
 					}
 					else
 					{
-						if (i < height && height > sealevel && height < snowline)
+						if (i < height && height > sealevel && height < snowline + (helpNoise.GetNoise2D(x, y) * 5))
 						{
 							if (height - i < 4) //places top layer of blocks
 							{
@@ -121,7 +121,7 @@ public partial class TerrainGenerator : Node
 							}
 
 						}
-						else if (i < height && height > sealevel && height >= snowline)  
+						else if (i < height && height > sealevel && height >= snowline + (helpNoise.GetNoise2D(x,y) * 5))  
 						{
 							if (height - i < 1)
 							{

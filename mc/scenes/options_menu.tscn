@@ -26,7 +26,7 @@ texture = ExtResource("6_i80p0")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dhn0l"]
 texture = ExtResource("4_binsn")
 
-[node name="options_menu" type="Control" node_paths=PackedStringArray("fcButton", "rdButton", "mtButton", "rdSlider")]
+[node name="options_menu" type="Control" node_paths=PackedStringArray("fcButton", "rdButton", "mtButton", "gmButton", "wfButton", "rdSlider")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -37,6 +37,8 @@ script = ExtResource("1_dhn0l")
 fcButton = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/FaceCullingButton")
 rdButton = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/RenderDistanceButton")
 mtButton = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/MultithreadingButton")
+gmButton = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/GreedyMeshing")
+wfButton = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/ShowWireframeButton")
 rdSlider = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/RenderDistanceSlider")
 
 [node name="Panel" type="Panel" parent="."]
@@ -131,7 +133,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_cust3")
 text = "Start Game
 "
 
-[node name="Start_button4" type="Button" parent="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+[node name="GreedyMeshing" type="Button" parent="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/align_to_largest_stylebox = 1
@@ -140,10 +142,9 @@ theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxTexture_0g30k")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_sa5ru")
 theme_override_styles/hover = SubResource("StyleBoxTexture_cust3")
-text = "Start Game
-"
+text = "Greedy Meshing"
 
-[node name="Start_button5" type="Button" parent="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+[node name="ShowWireframeButton" type="Button" parent="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/align_to_largest_stylebox = 1
@@ -152,8 +153,7 @@ theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxTexture_0g30k")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_sa5ru")
 theme_override_styles/hover = SubResource("StyleBoxTexture_cust3")
-text = "Start Game
-"
+text = "Show wireframe"
 
 [node name="back_options_button" type="Button" parent="GridContainer/VBoxContainer"]
 layout_mode = 2
@@ -169,4 +169,6 @@ text = "Back"
 [connection signal="pressed" from="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/FaceCullingButton" to="." method="_on_FaceCullingButton_pressed"]
 [connection signal="drag_ended" from="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/RenderDistanceSlider" to="." method="_on_RenderDistanceSlider_changed"]
 [connection signal="pressed" from="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/MultithreadingButton" to="." method="_on_MultiThreadingButton_pressed"]
+[connection signal="pressed" from="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/GreedyMeshing" to="." method="_on_greedy_meshing_button_pressed"]
+[connection signal="pressed" from="GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/ShowWireframeButton" to="." method="_on_show_wireframe_button_pressed"]
 [connection signal="pressed" from="GridContainer/VBoxContainer/back_options_button" to="." method="_on_back_button_pressed"]

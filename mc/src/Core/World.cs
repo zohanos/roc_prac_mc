@@ -7,7 +7,9 @@ public partial class World : Node3D
 	public bool firstgen = true;
 	[Export] public Control LoadingScreen;
 	[Export] public ProgressBar ProgressBar;
-	private static Options options = new Options(true, 5, true, false);
+	[Export] public Label DebugInfoLabel;
+	public static Debuginfo debuginfo;
+	private static Options options = new Options(true, 5, true, false, false);
 	[Export] public Node3D player; 
 	private static Vector2I _lastPlayerChunkPos;
 	private const int ChunkSize = 32; 
@@ -20,6 +22,8 @@ public partial class World : Node3D
 
 	public override void _Ready()
 	{
+		//debuginfo.triangles = 0;
+		world.Clear();
 		ConfigFile config = new ConfigFile();
 		Error err = config.Load("res://assets/options.cfg");
 
@@ -27,7 +31,7 @@ public partial class World : Node3D
 		if (err != Error.Ok)
 		{
 			GD.Print("Nastavení nenalezeno, vracím výchozí.");
-			options = new Options(true, 4, true, false);
+			options = new Options(true, 4, true, false, false);
 		}
 		else
 		{
@@ -35,12 +39,13 @@ public partial class World : Node3D
 			int rd = (int)config.GetValue("Graphics", "RenderDistance", 4);
 			bool mt = (bool)config.GetValue("System", "Multithreading", true);
 			bool gm = (bool)config.GetValue("Graphics", "GreedyMeshing", false);
+			bool wf = (bool)config.GetValue("Graphics", "ShowWireframe", false);
 
-			options = new Options(fc, rd, mt, gm);
+			options = new Options(fc, rd, mt, gm, wf);
 		}
-		
-		
-		
+
+
+
 
 		SetTextureArray();
 		_lastPlayerChunkPos = GetChunkPos(player.GlobalPosition);
@@ -49,6 +54,7 @@ public partial class World : Node3D
 	}
 	public override void _Process(double delta)
 	{
+
 		if (LoadingScreen.Visible != loadingScreenVisibility)
 		{
 			LoadingScreen.Hide();
@@ -78,8 +84,18 @@ public partial class World : Node3D
 	private void UpdateChunks()
 	{
 		int renderDistance = options.GetRenderDistance();
+		Viewport viewport = GetViewport();
 
-		// 1. Identify chunks to unload
+		// Toggle between Disabled (Normal) and Wireframe
+		if (options.GetWireframe())
+		{
+			viewport.DebugDraw = Viewport.DebugDrawEnum.Wireframe;
+		}
+		else
+		{
+			viewport.DebugDraw = Viewport.DebugDrawEnum.Disabled;
+		}
+		// Identify chunks to unload
 		List<Vector2I> toRemove = new List<Vector2I>();
 		foreach (var pos in world.Keys)
 		{
@@ -93,13 +109,17 @@ public partial class World : Node3D
 		// Unload them
 		foreach (var pos in toRemove)
 		{
+
 			Chunk chunk = world[pos];
 			world.Remove(pos);
-			chunk.QueueFree(); // Removes from scene and memory
+			if (GodotObject.IsInstanceValid(chunk))
+			{
+				chunk.QueueFree(); // Removes from scene and memory
+			}
 		}
 
 		
-		// 2. Identify and load new chunks
+		// Identify and load new chunks
 		for (int x = -renderDistance; x <= renderDistance; x++)
 		{
 			for (int y = -renderDistance; y <= renderDistance; y++)
@@ -188,7 +208,7 @@ public partial class World : Node3D
 		if (err != Error.Ok)
 		{
 			GD.Print("Nastavení nenalezeno, vracím výchozí.");
-			options = new Options(true, 4, true, false);
+			options = new Options(true, 4, true, false, false);
 		}
 		else
 		{
@@ -196,8 +216,9 @@ public partial class World : Node3D
 			int rd = (int)config.GetValue("Graphics", "RenderDistance", 4);
 			bool mt = (bool)config.GetValue("System", "Multithreading", true);
 			bool gm = (bool)config.GetValue("Graphics", "GreedyMeshing", false);
+			bool wf = (bool)config.GetValue("Graphics", "ShowWireframe", false);
 
-			options = new Options(fc, rd, mt, gm);
+			options = new Options(fc, rd, mt, gm, wf);
 		}
 	}
 
@@ -213,6 +234,8 @@ public partial class World : Node3D
 
 	public static void SetblockInChunk(Vector3I pos, int blockID)
 	{
+
+		//Calculate Local and Chunk coordinates
 		int localX = pos.X & 31;
 		int localY = pos.Y;
 		int localZ = pos.Z & 31;
@@ -221,5 +244,50 @@ public partial class World : Node3D
 		int chunkY = pos.Z >> 5;
 
 		world[new Vector2I(chunkX, chunkY)].SetBlock(localX, localY, localZ, blockID);
+
+
+		// Check for Border Cases and update neighbors
+		// Check X Borders
+		if (localX == 0)
+			UpdateNeighborPadding(chunkX - 1, chunkY, 32, localY, localZ, blockID);
+		else if (localX == 31)
+			UpdateNeighborPadding(chunkX + 1, chunkY, -1, localY, localZ, blockID);
+
+		// Check Z Borders
+		if (localZ == 0)
+			UpdateNeighborPadding(chunkX, chunkY - 1, localX, localY, 32, blockID);
+		else if (localZ == 31)
+			UpdateNeighborPadding(chunkX, chunkY + 1, localX, localY, -1, blockID);
+	}
+
+	private static void UpdateNeighborPadding(int cX, int cZ, int lX, int lY, int lZ, int blockID)
+	{
+		Vector2I neighborCoord = new Vector2I(cX, cZ);
+		if (world.ContainsKey(neighborCoord))
+		{
+			// We call SetBlock on the neighbor. 
+			// Because your SetBlock adds +1 to indices, 
+			// passing -1 results in index 0 (the padding).
+			// Passing 32 results in index 33 (the padding on the opposite side).
+			world[neighborCoord].SetBlock(lX, lY, lZ, blockID);
+		}
+	}
+
+	/*public static void SetDebugInfo(int x)
+	{
+		debuginfo.triangles += x;
+	}*/
+}
+
+
+
+public struct Debuginfo
+{
+	public int triangles;
+
+
+	public override string ToString()
+	{
+		return $"Total triangles rendered: {triangles}";
 	}
 }

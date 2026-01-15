@@ -11,6 +11,6 @@ void vertex() {
 void fragment() {
     // UV contains our tiling coordinates (x, y)
     // UV2.x contains our layer index
-    vec4 tex_color = texture(texture_array, vec3(UV, UV2.x));
+    vec4 tex_color = texture(texture_array, vec3(fract(UV), UV2.x));
     ALBEDO = tex_color.rgb;
 }

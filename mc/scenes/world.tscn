@@ -59,10 +59,11 @@ texture = ExtResource("4_4mrxx")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dss4m"]
 texture = ExtResource("3_i7141")
 
-[node name="World" type="Node3D" node_paths=PackedStringArray("LoadingScreen", "ProgressBar", "player")]
+[node name="World" type="Node3D" node_paths=PackedStringArray("LoadingScreen", "ProgressBar", "DebugInfoLabel", "player")]
 script = ExtResource("1_4mrxx")
 LoadingScreen = NodePath("LoadingScreen")
 ProgressBar = NodePath("LoadingScreen/VBoxContainer/ProgressBar")
+DebugInfoLabel = NodePath("DebugScreen/Label")
 player = NodePath("Player")
 
 [node name="TextureManager" type="Node" parent="."]
@@ -147,7 +148,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_26xuy")
 theme_override_styles/hover = SubResource("StyleBoxTexture_bc84e")
 text = "Exit to main menu"
 
-[node name="in_game_options" type="Control" parent="." node_paths=PackedStringArray("fcButton", "rdButton", "mtButton", "rdSlider")]
+[node name="in_game_options" type="Control" parent="." node_paths=PackedStringArray("fcButton", "rdButton", "mtButton", "gmButton", "wfButton", "rdSlider")]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -161,6 +162,8 @@ script = ExtResource("9_w7kh3")
 fcButton = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/FaceCullingButton")
 rdButton = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/RenderDistanceButton")
 mtButton = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/MultithreadingButton")
+gmButton = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/GreedyMeshingButton")
+wfButton = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/ShowWireframeButton")
 rdSlider = NodePath("GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/RenderDistanceSlider")
 
 [node name="Panel" type="Panel" parent="in_game_options"]
@@ -255,7 +258,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_jhx03")
 text = "Start Game
 "
 
-[node name="Start_button4" type="Button" parent="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+[node name="GreedyMeshingButton" type="Button" parent="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/align_to_largest_stylebox = 1
@@ -264,10 +267,10 @@ theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxTexture_e3hyu")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_q5onr")
 theme_override_styles/hover = SubResource("StyleBoxTexture_jhx03")
-text = "Start Game
+text = "Greedy Meshing
 "
 
-[node name="Start_button5" type="Button" parent="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+[node name="ShowWireframeButton" type="Button" parent="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/align_to_largest_stylebox = 1
@@ -276,8 +279,7 @@ theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxTexture_e3hyu")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_q5onr")
 theme_override_styles/hover = SubResource("StyleBoxTexture_jhx03")
-text = "Start Game
-"
+text = "Show Wireframe"
 
 [node name="back_options_button" type="Button" parent="in_game_options/GridContainer/VBoxContainer"]
 layout_mode = 2
@@ -333,10 +335,28 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/background = SubResource("StyleBoxTexture_xo05s")
 theme_override_styles/fill = SubResource("StyleBoxTexture_dss4m")
 
+[node name="DebugScreen" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="DebugScreen"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 1.0
+grow_vertical = 2
+
 [connection signal="pressed" from="in_game_menu/VBoxContainer/Back_button" to="in_game_menu" method="on_back_button_pressed"]
 [connection signal="pressed" from="in_game_menu/VBoxContainer/Options_button" to="in_game_menu" method="on_options_button_pressed"]
 [connection signal="pressed" from="in_game_menu/VBoxContainer/Exit_to_main_menu_button" to="in_game_menu" method="on_exit_to_main_menu_button_pressed"]
 [connection signal="pressed" from="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/FaceCullingButton" to="in_game_options" method="_on_FaceCullingButton_pressed"]
 [connection signal="drag_ended" from="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/RenderDistanceSlider" to="in_game_options" method="_on_RenderDistanceSlider_changed"]
 [connection signal="pressed" from="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/MultithreadingButton" to="in_game_options" method="_on_MultiThreadingButton_pressed"]
+[connection signal="pressed" from="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/GreedyMeshingButton" to="in_game_options" method="_on_greedy_meshing_button_pressed"]
+[connection signal="pressed" from="in_game_options/GridContainer/VBoxContainer/ScrollContainer/VBoxContainer/ShowWireframeButton" to="in_game_options" method="_on_show_wireframe_button_pressed"]
 [connection signal="pressed" from="in_game_options/GridContainer/VBoxContainer/back_options_button" to="in_game_options" method="_on_back_button_pressed"]
