@@ -320,7 +320,7 @@ public partial class Renderer : Node
 		for (int d = 0; d < 6; d++)
 		{
 			Direction dir = (Direction)d;
-			BinaryGreedyMesh(chunk, dir, vertices, normals, uvs, uvs2, indices);
+			GreedyMeshFace(chunk, dir, vertices, normals, uvs, uvs2, indices);
 		}
 
 		if (vertices.Count == 0) return null;
@@ -347,7 +347,7 @@ public partial class Renderer : Node
 			CollisionFaces = colFaces
 		};
 	}
-	private void BinaryGreedyMesh(Chunk chunk, Direction dir, List<Vector3> verts, List<Vector3> norms, List<Vector2> uvs, List<Vector2> uvs2, List<int> inds)
+	private void GreedyMeshFace(Chunk chunk, Direction dir, List<Vector3> verts, List<Vector3> norms, List<Vector2> uvs, List<Vector2> uvs2, List<int> inds)
 	{
 		Vector3I dim = chunk.chunkDimms;
 		int axis = GetAxisForDirection(dir);

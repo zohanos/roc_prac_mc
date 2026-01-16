@@ -18,14 +18,17 @@ public partial class World : Node3D
 	public static Dictionary<Vector2I, bool> notRenderedChunks = new Dictionary<Vector2I, bool>();
 	public static int pb;
 	public static bool loadingScreenVisibility = false;
+	public int seed;
 
 
 	public override void _Ready()
 	{
+
+		seed = (int)GD.Randi();
 		//debuginfo.triangles = 0;
 		world.Clear();
 		ConfigFile config = new ConfigFile();
-		Error err = config.Load("res://assets/options.cfg");
+		Error err = config.Load("user://options.cfg");
 
 
 		if (err != Error.Ok)
@@ -111,10 +114,11 @@ public partial class World : Node3D
 		{
 
 			Chunk chunk = world[pos];
-			world.Remove(pos);
 			if (GodotObject.IsInstanceValid(chunk))
 			{
+				world.Remove(pos);
 				chunk.QueueFree(); // Removes from scene and memory
+
 			}
 		}
 
@@ -156,6 +160,7 @@ public partial class World : Node3D
 		world[pos] = chunk;
 
 		chunk.SetChunkPosition(pos);
+		chunk.SetSeed(seed);
 		switch (options.GetMultithreading())
 		{
 			case true:
@@ -202,7 +207,7 @@ public partial class World : Node3D
 	{
 
 		ConfigFile config = new ConfigFile();
-		Error err = config.Load("res://assets/options.cfg");
+		Error err = config.Load("user://options.cfg");
 
 
 		if (err != Error.Ok)

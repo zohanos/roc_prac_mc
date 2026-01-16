@@ -15,7 +15,7 @@ public partial class OptionsMenu : Control
 	public override void _Ready()
 	{
 		ConfigFile config = new ConfigFile();
-		Error err = config.Load("res://assets/options.cfg");
+		Error err = config.Load("user://options.cfg");
 
 
         if (err != Error.Ok)
@@ -59,7 +59,7 @@ public partial class OptionsMenu : Control
         config.SetValue("Graphics", "ShowWireframe", options.GetWireframe());
 
         // Uložení na disk
-        Error err = config.Save("res://assets/options.cfg");
+        Error err = config.Save("user://options.cfg");
 		if (err != Error.Ok)
 		{
 			GD.PrintErr("Nepodařilo se uložit nastavení: " + err);

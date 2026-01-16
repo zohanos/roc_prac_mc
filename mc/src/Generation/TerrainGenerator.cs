@@ -14,42 +14,40 @@ public partial class TerrainGenerator : Node
 	private FastNoiseLite desertNoise = new FastNoiseLite();
 	private FastNoiseLite cheeseCaveNoise = new FastNoiseLite();
     private FastNoiseLite PlantsNoise = new FastNoiseLite(); //cacti and trees
+	private int seed = 1;
 
-
-    public void SetupNoise(int seed)
+	public void SetSeed(int s)
 	{
+		seed = s;
+	}
 
-		baseNoise.Seed = seed;
-		baseNoise.Frequency = 0.005f;
-		baseNoise.FractalOctaves = 2;
-		baseNoise.NoiseType = FastNoiseLite.NoiseTypeEnum.Perlin;
+	public int[,,] GenerateTerrainShape(Vector2I chunkPos)
+	{
+        baseNoise.Seed = seed;
+        baseNoise.Frequency = 0.005f;
+        baseNoise.FractalOctaves = 2;
+        baseNoise.NoiseType = FastNoiseLite.NoiseTypeEnum.Perlin;
 
-		//breaks the terrain, so its not too smooth
-		helpNoise.Seed = seed + 1;
-		helpNoise.Frequency = 0.015f;
-		helpNoise.FractalOctaves = 4;
+        //breaks the terrain, so its not too smooth
+        helpNoise.Seed = seed + 1;
+        helpNoise.Frequency = 0.015f;
+        helpNoise.FractalOctaves = 4;
 
 
-		desertNoise.Seed = seed + 2;
-		desertNoise.Frequency = 0.001f; 
+        desertNoise.Seed = seed + 2;
+        desertNoise.Frequency = 0.001f;
 
 
         cheeseCaveNoise.Seed = seed + 3;
-		cheeseCaveNoise.Frequency = 0.005f;
+        cheeseCaveNoise.Frequency = 0.005f;
 
-		PlantsNoise.Seed = seed + 4;
-		PlantsNoise.Frequency = 0.005f;
-		PlantsNoise.NoiseType = FastNoiseLite.NoiseTypeEnum.Cellular;
-		PlantsNoise.CellularReturnType = FastNoiseLite.CellularReturnTypeEnum.CellValue;
-
-
+        PlantsNoise.Seed = seed + 4;
+        PlantsNoise.Frequency = 0.005f;
+        PlantsNoise.NoiseType = FastNoiseLite.NoiseTypeEnum.Cellular;
+        PlantsNoise.CellularReturnType = FastNoiseLite.CellularReturnTypeEnum.CellValue;
 
 
-    }
-	public int[,,] GenerateTerrainShape(Vector2I chunkPos)
-	{
-		int[,,] chunkData = new int[34, 256, 34];
-		SetupNoise(1);
+        int[,,] chunkData = new int[34, 256, 34];
 		
 
 		for (int x = 0; x < 34; x++) 
@@ -165,6 +163,7 @@ public partial class TerrainGenerator : Node
 
 		return height;
 	}
+
 
 	public bool IsThereDesert(float x, float z)
 	{

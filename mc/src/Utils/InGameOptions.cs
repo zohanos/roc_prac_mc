@@ -16,7 +16,7 @@ public partial class InGameOptions : Control
 	public override void _Ready()
 	{
 		ConfigFile config = new ConfigFile();
-		Error err = config.Load("res://assets/options.cfg");
+		Error err = config.Load("user://options.cfg");
 
 
 		if (err != Error.Ok)
@@ -34,6 +34,13 @@ public partial class InGameOptions : Control
 
 			options = new Options(fc, rd, mt, gm, wf);
 		}
+
+		rdSlider.Value = options.GetRenderDistance();
+		fcButton.Text = $"FaceCulling - {options.GetFaceCulling()}";
+		rdButton.Text = $"RenderDistance = {(int)rdSlider.Value}";
+		mtButton.Text = $"Multithreading - {options.GetMultithreading()}";
+		gmButton.Text = $"Greedy Meshing - {options.GetGreedyMeshing()}";
+		wfButton.Text = $"Show wireframe - {options.GetWireframe()}";
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -63,7 +70,7 @@ public partial class InGameOptions : Control
 		config.SetValue("Graphics", "ShowWireframe", options.GetWireframe());
 
 		// Uložení na disk
-		Error err = config.Save("res://assets/options.cfg");
+		Error err = config.Save("user://options.cfg");
 		if (err != Error.Ok)
 		{
 			GD.PrintErr("Nepodařilo se uložit nastavení: " + err);

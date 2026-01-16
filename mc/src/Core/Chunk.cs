@@ -10,10 +10,16 @@ public partial class Chunk : StaticBody3D
 	public Vector3I chunkDimms = new Vector3I(32, 256, 32);
 	public int[,,] chunkData;
 	public bool rendered = false;
+	private int seed;
 
 	public Chunk()
 	{
 
+	}
+
+	public void SetSeed(int s)
+	{
+		seed = s;
 	}
 	public void SetChunkPosition(Vector2I chunkPosition)
 	{
@@ -23,6 +29,7 @@ public partial class Chunk : StaticBody3D
 	{
 		
 		var tg = new TerrainGenerator();
+		tg.SetSeed(seed);
 		chunkData = tg.GenerateTerrainShape(chunkPosition);
 		RenderChunk();
 	}
@@ -31,6 +38,7 @@ public partial class Chunk : StaticBody3D
 	{
 		chunkData = await Task.Run(() => {
 			var tg = new TerrainGenerator();
+			tg.SetSeed(seed);
 			return tg.GenerateTerrainShape(chunkPosition);
 		});
 		RenderChunkMT();

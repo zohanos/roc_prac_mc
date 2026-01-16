@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:src\\rendering\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\core\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:src\\core\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\core\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:src\\core\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\utils\\optionsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:src\\utils\\optionsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\data\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:src\\data\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\data\\voxeldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:src\\data\\voxeldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\core\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:src\\core\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\utils\\ingameoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -24,6 +28,10 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\lukya\\OneDrive\\Dokumenty\\v-5\\in_game_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\utils\\optionsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|solutionrelative:src\\utils\\optionsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA3C504F-AB1D-40F3-9268-B6E9B361A60B}|v5.csproj|c:\\users\\lukya\\onedrive\\plocha\\nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\utils\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -44,69 +52,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "Block.cs",
+              "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\Data\\Block.cs",
+              "RelativeDocumentMoniker": "src\\Data\\Block.cs",
+              "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\Data\\Block.cs",
+              "RelativeToolTip": "src\\Data\\Block.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T02:04:39.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VoxelData.cs",
+              "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\Data\\VoxelData.cs",
+              "RelativeDocumentMoniker": "src\\Data\\VoxelData.cs",
+              "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\Data\\VoxelData.cs",
+              "RelativeToolTip": "src\\Data\\VoxelData.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAgwGsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T02:04:28.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "InGameOptions.cs",
               "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\Utils\\InGameOptions.cs",
               "RelativeDocumentMoniker": "src\\Utils\\InGameOptions.cs",
               "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\Utils\\InGameOptions.cs",
               "RelativeToolTip": "src\\Utils\\InGameOptions.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAwwEEAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowEoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-12T20:11:25.018Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "OptionsMenu.cs",
               "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\Utils\\OptionsMenu.cs",
               "RelativeDocumentMoniker": "src\\Utils\\OptionsMenu.cs",
               "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\Utils\\OptionsMenu.cs",
               "RelativeToolTip": "src\\Utils\\OptionsMenu.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwHIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwDQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-12T20:10:33.552Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Options.cs",
               "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\Utils\\Options.cs",
               "RelativeDocumentMoniker": "src\\Utils\\Options.cs",
               "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\Utils\\Options.cs",
               "RelativeToolTip": "src\\Utils\\Options.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-12T20:10:25.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "World.cs",
               "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\Core\\World.cs",
               "RelativeDocumentMoniker": "src\\Core\\World.cs",
               "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\Core\\World.cs",
               "RelativeToolTip": "src\\Core\\World.cs",
-              "ViewState": "AgIAAMIAAAAAAAAAAAAUwAcBAAApAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwGAAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-11T22:45:30.394Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Chunk.cs",
               "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\Core\\Chunk.cs",
               "RelativeDocumentMoniker": "src\\Core\\Chunk.cs",
               "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\Core\\Chunk.cs",
               "RelativeToolTip": "src\\Core\\Chunk.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwDsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowD4AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-04T00:09:49.161Z",
               "EditorCaption": ""
@@ -119,14 +153,14 @@
               "RelativeDocumentMoniker": "src\\Rendering\\Renderer.cs",
               "ToolTip": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\Rendering\\Renderer.cs",
               "RelativeToolTip": "src\\Rendering\\Renderer.cs",
-              "ViewState": "AgIAAMMAAAAAAAAAAAAmwPEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAD8BAAAAAAAAAAAYwKoBAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-03T00:32:50.532Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "TerrainGenerator.cs",
               "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Plocha\\Nov\u00E1 slo\u017Eka\\roc_prac_mc\\mc\\src\\Generation\\TerrainGenerator.cs",
               "RelativeDocumentMoniker": "src\\Generation\\TerrainGenerator.cs",
@@ -134,11 +168,12 @@
               "RelativeToolTip": "src\\Generation\\TerrainGenerator.cs",
               "ViewState": "AgIAAJMAAAAAAAAAAAAowEkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T00:24:15.799Z"
+              "WhenOpened": "2026-01-03T00:24:15.799Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "in_game_menu.cs",
               "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Dokumenty\\v-5\\in_game_menu.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Dokumenty\\v-5\\in_game_menu.cs",
@@ -151,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\Users\\lukya\\OneDrive\\Dokumenty\\v-5\\MainMenu.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Dokumenty\\v-5\\MainMenu.cs",
@@ -159,7 +194,8 @@
               "RelativeToolTip": "..\\..\\..\\..\\Dokumenty\\v-5\\MainMenu.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T15:52:22.351Z"
+              "WhenOpened": "2025-12-01T15:52:22.351Z",
+              "EditorCaption": ""
             }
           ]
         }

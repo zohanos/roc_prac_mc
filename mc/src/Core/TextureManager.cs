@@ -11,9 +11,10 @@ public partial class TextureManager : Node
 
 		foreach (string path in paths)
 		{
-			var img = Image.LoadFromFile(path);
-			// Ensure the format is consistent (e.g., RGBA8)
-			img.Convert(Image.Format.Rgba8);
+            Texture2D tex = ResourceLoader.Load<Texture2D>(path);
+            var img = tex.GetImage();
+            // Ensure the format is consistent (e.g., RGBA8)
+            img.Convert(Image.Format.Rgba8);
 			img.GenerateMipmaps();
 			images.Add(img);
 		}
